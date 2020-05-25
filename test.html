@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.loop_wrap {
+  display: flex;
+  width: 95vw;
+  overflow: hidden;
+  margin: auto;
+}
+.loop_wrap ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  padding: 0;
+}
+.loop_wrap li {
+  width: 360px;
+  height: 600px;
+  background-image: url("./poster mockup.png");
+  background-size: contain;
+}
+.loop_wrap img {
+  width: 250px;
+  display: block;
+  margin: 125px auto 0;
+}
+.loop_wrap img:hover {
+  width: 350px;
+  display: block;
+  margin: 80px auto 0;
+}
+.loop_wrap ul:first-child {
+  animation: loop 80s -40s linear infinite;
+}
+
+.loop_wrap ul:last-child {
+  animation: loop2 80s linear infinite;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+.loop_wrap:hover ul {
+  animation-play-state: paused;
+}
+</style>
+</head>
+<body>
+<div class="loop_wrap">
+  <ul>
+    <li><img src="1 thumbnail.png" /></li>
+    <li><img src="2 thumbnail.png" /></li>
+    <li><img src="3 thumbnail.png" /></li>
+    <li><img src="4 thumbnail.png" /></li>
+    <li><img src="5 thumbnail.png" /></li>
+    <li><img src="6 thumbnail.png" /></li>
+  </ul>
+  <ul>
+    <li><img src="1 thumbnail.png" /></li>
+    <li><img src="2 thumbnail.png" /></li>
+    <li><img src="3 thumbnail.png" /></li>
+    <li><img src="4 thumbnail.png" /></li>
+    <li><img src="5 thumbnail.png" /></li>
+    <li><img src="6 thumbnail.png" /></li>
+  </ul>
+</div>
+</body>
+</html>
